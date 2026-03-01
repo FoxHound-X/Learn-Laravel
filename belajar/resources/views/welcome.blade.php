@@ -12,46 +12,13 @@
     <h2 class="mb-4">Data Siswa</h2>
 
     <!-- Tombol Tambah -->
-    <div class="mb-3">
-        <button class="btn btn-primary">
-            + Tambah Data
-        </button>
-    </div>
+<div class="mb-3">
+    <a href="{{ route('tambah.tambah_tampil') }}" 
+       class="btn btn-primary">
+        Tambah Data
+    </a>
+</div>
 
-    <!-- Form (Desain Saja) -->
-    <div class="card mb-4 shadow-sm">
-        <div class="card-header bg-light">
-            Form Input Data
-        </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Nama</label>
-                    <input type="text" class="form-control" placeholder="Masukkan nama">
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Kelas</label>
-                    <input type="text" class="form-control" placeholder="Masukkan kelas">
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Telepon</label>
-                    <input type="text" class="form-control" placeholder="Masukkan nomor telepon">
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">Alamat</label>
-                    <input type="text" class="form-control" placeholder="Masukkan alamat">
-                </div>
-            </div>
-
-            <div class="mt-3">
-                <button class="btn btn-success">Simpan</button>
-                <button class="btn btn-secondary">Batal</button>
-            </div>
-        </div>
-    </div>
 
     <!-- Tabel -->
     <div class="card shadow-sm">
@@ -80,8 +47,11 @@
                         <td>{{ $item->telp }}</td>
                         <td>{{ $item->alamat }}</td>
                         <td class="text-center">
-                            <button class="btn btn-warning btn-sm">Ubah</button>
+                        <form action="{{ route('tambah.delete_data', $item->id) }}" method="POST">
+                            @csrf
+                            @method('delete')
                             <button class="btn btn-danger btn-sm">Hapus</button>
+                        </form>
                         </td>
                     </tr>
                         

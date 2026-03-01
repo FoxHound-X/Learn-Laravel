@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Schema;
 
 class dataku extends Model
 {
+    protected $fillable = ['nama', 'kelas', 'telp', 'alamat'];
+    protected $table = 'dataku';
+
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
