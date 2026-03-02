@@ -35,5 +35,22 @@ class TestingController
         ]);
 
         return redirect('/')->with('success', 'Data berhasil ditambahkan');
-    }
+        }
+        
+        public function editdataview(){
+            $data = dataku::findOrFail($id);
+            return view('edit', compact('data'));
+        }
+
+        public function update_sys(Request $request, $id){
+            $data = dataku::findOrFail($id);
+            
+            $data->update_sys([
+                'nama'  =>  $request->nama,
+                'kelas'  =>  $request->kelas,
+                'telp'  =>  $request->telp,
+                'alamatt'  =>  $request->alamat,
+            ]);
+        return redirect('/')->with('success', 'Data berhasil ditambahkan');
+        }
 }

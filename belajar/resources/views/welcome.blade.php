@@ -52,6 +52,7 @@
                             @method('delete')
                             <button class="btn btn-danger btn-sm">Hapus</button>
                         </form>
+                        <a href="{{ route('update.editdataview', $item->id) }}">Edit</a>
                         </td>
                     </tr>
                         
