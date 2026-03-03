@@ -11,7 +11,7 @@
 
     <form action="/tambah" method="POST">
         @csrf
-        @method('PUT')
+        {{-- @method('PUT') --}}
     <div class="card mb-4 shadow-sm">
         <div class="card-header bg-light">
             Form Input Data
@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label class="form-label">Nama</label>
-                    <input name="nama" type="text" class="form-control" placeholder="Masukkan nama" value="{{ $nama }}" required>
+                    <input name="nama" type="text" class="form-control" placeholder="Masukkan nama" required>
                 </div>
 
                 <div class="col-md-6 mb-3">
