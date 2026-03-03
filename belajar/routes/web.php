@@ -11,3 +11,5 @@
 
     Route::get('/edit/{id}', [TestingController::class, 'editdataview'])->name('update.editdataview');
     Route::post('/edit/{id}', [TestingController::class, 'update_sys'])->name('update.update_sys');
+
+    Route::get('/user/{id}', [TestingController::class, 'userinterface'])->name('user.userinterface');

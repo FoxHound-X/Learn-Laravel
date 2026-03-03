@@ -53,6 +53,7 @@
                             <button class="btn btn-danger btn-sm">Hapus</button>
                         </form>
                         <a href="{{ route('update.editdataview', $item->id) }}">Edit</a>
+                        <a href="{{ route('user.userinterface', $item->id) }}">Lihat Lengkap</a>
                         </td>
                     </tr>
                         
