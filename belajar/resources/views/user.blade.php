@@ -33,7 +33,7 @@
             <div class="value">{{ $dataku->alamat }}</div>
             </div>
         </div>
-        </div>
+        </div>  
 
         <footer class="footer">
         <span>© 2026</span>
