@@ -60,8 +60,8 @@ class TestingController
         return view('edit', compact('data'));
     }
 
-    public function userinterface($id){
-        $dataku = dataku::findOrFail($id);
-        return view('user', compact('dataku'));
-    }
+        public function userinterface($id){
+            $dataku = dataku::findOrFail($id);
+            return view('user', compact('dataku'));
+        }
 }
